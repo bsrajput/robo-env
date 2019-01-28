@@ -1,5 +1,5 @@
 #!/bin/sh
-# run this script as root
+# Run me with superuser privileges
 
 
 SOURCE_FILE=/etc/apt/sources.list
