@@ -3,11 +3,11 @@
 This repository contains scripts to install the tools which I use in my day2day life.
 This repository is solely tested on Debian Stretch, as I use Debian Stretch.
 
-   [X] Docker
-   [X] ZSH
-   [X] Tmux
-   [X] Emacs
-   [X] Clojure
+  *  [X] Docker
+  *  [X] ZSH
+  *  [X] Tmux
+  *  [X] Emacs
+  *  [X] Clojure
 
 * Usage
 
