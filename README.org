@@ -1,0 +1,12 @@
+* ROBO ENV
+
+This repository contains scripts to install the tools which I use in my day2day life.
+This repository is solely tested on Debian Stretch, as I use Debian Stretch.
+
+   * Docker
+   * ZSH
+   * Tmux
+   * Emacs
+   * Clojure
+
+* Usage
