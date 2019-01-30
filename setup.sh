@@ -26,7 +26,12 @@ sudo apt-get install wget -y
 sudo apt-get install git -y
 sudo apt-get install awscli -y
 sudo apt-get install tmux -y
-
+sudo apt-get install fonts-indic -y
+sudo apt-get install linux-image-$(uname -r|sed 's,[^-]*-[^-]*-,,') linux-headers-$(uname -r|sed 's,[^-]*-[^-]*-,,') -y
+sudo apt-get install make -y
+sudo apt-get install gcc -y
+sudo apt-get install perl -y
+sudo apt-get install unzip -y
 
 # Shell (zsh) and syntax highlighting
 echo "Setting up oh-my-zsh..."
@@ -68,3 +73,10 @@ fc-cache -vf ~/.fonts/
 mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
 sudo apt-get install dconf-cli -y
+
+# install my emacs
+if [ ! -e ~/.emacs.d ]; then
+    cd
+    echo "Pulling emacs.d..."
+    git clone https://github.com/engineertobe/emacs.d ~/.emacs.d
+fi
