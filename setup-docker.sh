@@ -1,5 +1,5 @@
 #!/bin/sh
-
+# Setups Docker on my debian
 # Fail on error
 set -e
 
