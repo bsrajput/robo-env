@@ -80,3 +80,11 @@ if [ ! -e ~/.emacs.d ]; then
     echo "Pulling emacs.d..."
     git clone https://github.com/engineertobe/emacs.d ~/.emacs.d
 fi
+
+# install fuzzy finder
+if [ ! -e ~/.fzf ]; then
+	echo "Installing fzf"
+        git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+        ~/.fzf/install
+fi
+
