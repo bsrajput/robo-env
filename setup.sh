@@ -32,6 +32,8 @@ sudo apt-get install make -y
 sudo apt-get install gcc -y
 sudo apt-get install perl -y
 sudo apt-get install unzip -y
+sudo apt-get install terminator -y
+sudo apt-get install rlwrap -y
 
 # Shell (zsh) and syntax highlighting
 echo "Setting up oh-my-zsh..."
