@@ -1,11 +1,16 @@
 Docker
 ----------
 
-***** pull docker image
-docker pull iimagename:tag
+- pull docker image
 
-***** mount the volume
+#+BEGIN_SRC dockerpull
+docker pull imagename:tag
+#_END_SRC
+
+- mount the volume
+#+BEGIN_SRC mountvolume
 docker run -ti -v ~/yourpath:/dockerpath imagename /bin/bash
+#_END_SRC
 
 ***** inspect
 docker inspect <container-id>
