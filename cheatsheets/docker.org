@@ -1,0 +1,20 @@
+Docker
+----------
+
+***** pull docker image
+docker pull iimagename:tag
+
+***** mount the volume
+docker run -ti -v ~/yourpath:/dockerpath imagename /bin/bash
+
+***** inspect
+docker inspect <container-id>
+
+***** start and attach to exited container
+docker start -i -a <container-id>
+
+***** connect to a particular container
+docker exec -it <container-id> /bin/bash
+
+**** build docker image
+docker build -it dockerimage-name .
