@@ -2,7 +2,6 @@ Docker
 ----------
 
 - pull docker image
-
 #+BEGIN_SRC dockerpull
 docker pull imagename:tag
 #_END_SRC
