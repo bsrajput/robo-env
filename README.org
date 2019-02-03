@@ -3,12 +3,12 @@
 This repository contains scripts to install the tools which I use in my day2day life.
 This repository is solely tested on Debian Buster, as I use Debian Buster.
 
-  -  [[Docker][https://www.docker.com]]
-  -  [[oh][myzshhttps://ohmyz.sh/]]
-  -  [[tmux][https://github.com/tmux/tmux]]
-  -  [[emacs][https://www.gnu.org/software/emacs/]]
-  -  [[Clojure][https://clojure.org/]]
-  -  [[Rust][https://www.rust-lang.org/]]
+  -  [[https://www.docker.com][docker]]
+  -  [[https://ohmyz.sh][ohmyzsh]]
+  -  [[https://github.com/tmux/tmux][tmux]]
+  -  [[https://www.gnu.org/software/emacs/][emacs]]
+  -  [[https://clojure.org][Clojure]]
+  -  [[https://rust-lang.org][Rust]]
 
 * Usage
 
@@ -16,3 +16,8 @@ This repository is solely tested on Debian Buster, as I use Debian Buster.
   - [[https://raw.githubusercontent.com/abhishekamralkar/robo-env/master/add_me_to_sudoers.sh?token=AA1AN5-g7Wj6R4m6kglTI51GujXsYNO9ks5cVuGGwA%3D%3D][add_me_to_sudoers.sh]]
   - [[https://raw.githubusercontent.com/abhishekamralkar/robo-env/master/update_repo.sh?token=AA1AN44Qwbc5KjX0KL6FBPjTxO6TgU7Zks5cVuIQwA%3D%3D][update_repo.sh]]
   - [[https://raw.githubusercontent.com/abhishekamralkar/robo-env/master/setup.sh?token=AA1AN021eC0hMID6_WmlJ5kHyiLmjAqZks5cVvhJwA%3D%3D][setup.sh]]
+
+* CheatSheets
+
+  - [[https://github.com/abhishekamralkar/robo-env/blob/master/cheatsheets/emacs][emacs-cheatsheet]]
+  - [[https://github.com/abhishekamralkar/robo-env/blob/master/cheatsheets/tmux][tmux-cheatsheet]]
