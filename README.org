@@ -13,9 +13,9 @@ This repository is solely tested on Debian Buster, as I use Debian Buster.
 * Usage
 
 
-  - [[https://raw.githubusercontent.com/abhishekamralkar/robo-env/master/add_me_to_sudoers.sh?token=AA1AN5-g7Wj6R4m6kglTI51GujXsYNO9ks5cVuGGwA%3D%3D][add_me_to_sudoers.sh]]
-  - [[https://raw.githubusercontent.com/abhishekamralkar/robo-env/master/update_repo.sh?token=AA1AN44Qwbc5KjX0KL6FBPjTxO6TgU7Zks5cVuIQwA%3D%3D][update_repo.sh]]
-  - [[https://raw.githubusercontent.com/abhishekamralkar/robo-env/master/setup.sh?token=AA1AN021eC0hMID6_WmlJ5kHyiLmjAqZks5cVvhJwA%3D%3D][setup.sh]]
+  - [[https://raw.githubusercontent.com/abhishekamralkar/robo-env/master/add_me_to_sudoers.sh][add_me_to_sudo]]
+  - [[https://raw.githubusercontent.com/abhishekamralkar/robo-env/master/update_repo.sh][update_repo]]
+  - [[https://raw.githubusercontent.com/abhishekamralkar/robo-env/master/setup.sh][setup]]
 
 * CheatSheets
 
