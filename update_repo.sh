@@ -21,6 +21,6 @@ deb http://httpredir.debian.org/debian/ stretch main contrib non-free
 EOF
 }
 
-main {
-  update_repo
-  }
+main (){
+    update_repo
+}

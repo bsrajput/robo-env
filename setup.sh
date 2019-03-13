@@ -47,12 +47,6 @@ if [ ! -e ~/.oh-my-zsh ]; then
     sudo chsh -s /bin/zsh
 fi
 
-# liquid prompt
-if [ ! -e ~/bin/liquidprompt ]; then
-    echo "Setting up liquidprompt..."
-    mkdir -p ~/bin
-    wget https://raw.github.com/nojhan/liquidprompt/master/liquidprompt -P ~/bin
-fi
 
 # install powerline fonts
 wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
