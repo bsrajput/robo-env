@@ -9,7 +9,7 @@ CLJ_BIN="/usr/local/bin/clojure"
 install_leingen () {
     if [ ! -e "$LEIN_BIN" ];
     then
-      curl-O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein && sudo chmod 755 lein && sudo mv lein /usr/bin
+      curl -O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein && sudo chmod 755 lein && sudo mv lein /usr/bin
     else
       echo "Lein is installed"
       fi
@@ -28,3 +28,5 @@ main () {
     install_leingen
     install_clojure
 }
+
+main

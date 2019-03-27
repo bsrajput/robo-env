@@ -4,10 +4,10 @@
 set -e
 
 # Update deps
-sudo apt-get update 
-sudo apt-get upgrade
+sudo apt-get update -y 
+sudo apt-get upgrade -y
 
-TERRAFORM_VERSION="0.11.11"
+TERRAFORM_VERSION="0.11.12"
 
 echo "Installing Terraform..."
 wget --no-check-certificate  https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip 
