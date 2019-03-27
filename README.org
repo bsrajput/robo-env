@@ -1,7 +1,7 @@
 * ROBO ENV
 
 This repository contains scripts to install the tools which I use in my day2day life.
-This repository is solely tested on Debian Buster, as I use Debian Buster.
+This repository is solely tested on Debian , as I use Debian.
 
   -  [[https://www.docker.com][docker]]
   -  [[https://ohmyz.sh][ohmyzsh]]
