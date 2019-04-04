@@ -35,4 +35,7 @@ sudo apt-get install unzip -y
 sudo apt-get install terminator -y
 sudo apt-get install rlwrap -y
 sudo apt-get install mutt -y
-
+sudo apt-get install zsh -y
+sudo apt-get install openvpn -y
+sudo apt-get install resolvconf -y
+sudo apt-get install python3-pip -y
