@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/sh
+# Author: Abhishek Anand Amralkar
 # Run me with superuser privileges
 # This scripts add me to the sudoers file
 
