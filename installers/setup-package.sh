@@ -40,3 +40,4 @@ sudo apt-get install openvpn -y
 sudo apt-get install resolvconf -y
 sudo apt-get install python3-pip -y
 sudo apt-get install htop -y
+sudo apt-get install rsync -y

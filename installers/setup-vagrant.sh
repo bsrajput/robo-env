@@ -1,27 +1,38 @@
 #!/bin/sh
+# Author: Abhishek Anand Amralkar
+# This script Hashicorp Vagrant.
+unset CDPATH
+#CURDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Fail on error
 set -e
 
 # Update deps
-sudo apt-get update 
-sudo apt-get upgrade
+sudo apt-get update -y 
+sudo apt-get upgrade -y
 
-VAGRANT_VERSION="2.2.3"
-
+VAGRANT_VERSION=${VAGRANT_VERSION:-"2.2.4"}
+DIR=${DIR:-"/tmp"}
 echo "Installing Vagrant..."
 
-wget --no-check-certificate https://releases.hashicorp.com/vagrant/${VAGRANT_VERSION}/vagrant_${VAGRANT_VERSION}_x86_64.deb 
+# check if vagrant installed or not?
+dpkg -s vagrant &> /dev/null
 
-sudo dpkg -i vagrant_${VAGRANT_VERSION}_x86_64.deb
+if [ $? -eq 0 ]; then
+    echo "Vagrant is installed!"
+else
+    echo "Vagrant is NOT installed!"
+    cd $DIR && wget --no-check-certificate https://releases.hashicorp.com/vagrant/${VAGRANT_VERSION}/vagrant_${VAGRANT_VERSION}_x86_64.deb 
+    sudo dpkg -i vagrant_${VAGRANT_VERSION}_x86_64.deb
+    echo "Installing required plug-ins"
+    vagrant plugin install vagrant-vbguest
+    vagrant plugin update vagrant-vbguest
+    vagrant plugin install vagrant-triggers
+    echo "Restarting vagrant services..."
+    sudo service vboxdrv restart
+    cd $DIR && sudo rm -rf vagrant_${VAGRANT_VERSION}_x86_64.deb 
 
-echo "Installing required plug-ins"
-vagrant plugin install vagrant-vbguest
-vagrant plugin update vagrant-vbguest
-vagrant plugin install vagrant-triggers
-
-echo "Restarting vagrant services..."
-sudo service vboxdrv restart
+fi
 
 echo "---------------------------------"
 echo "Please restart VirtualBox if you are using it"
