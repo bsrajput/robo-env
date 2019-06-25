@@ -1,6 +1,8 @@
-#!/bin/sh
-# Robo Env is to install and configure my Debian Stretch 9 machines.
+#!/bin/bash
+# Author: Abhishek Anand Amralkar
+# This script installs packages needed for my tools to run on my debian.
 # Fail on error
+
 set -e
 
 # Pick script location
@@ -41,3 +43,4 @@ sudo apt-get install resolvconf -y
 sudo apt-get install python3-pip -y
 sudo apt-get install htop -y
 sudo apt-get install rsync -y
+echo "Utilities installation finished"

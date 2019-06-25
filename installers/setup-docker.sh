@@ -1,7 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 # Author: Abhishek Anand Amralkar
 # This script installs Docker and Docker Compose
 # Fail on error
+
 set -e
 DOCKER_COMPOSE_VERSION=${DOCKER_COMPOSE_VERSION:-"1.23.2"}
 DOCKER_COMPOSE_PATH=${DOCKER_COMPOSE_PATH:-"/us"}
@@ -28,3 +29,10 @@ install_dockercompose(){
         echo "Docker Compose is installed"
         fi
 }
+
+main () {
+    install_docker
+    install_dockercompose
+}
+
+main
