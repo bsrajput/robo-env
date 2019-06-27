@@ -1,6 +1,6 @@
 #!/bin/sh
 # Author: Abhishek Anand Amralkar
-# This script Hashicorp Vagrant.
+# This script installs Hashicorp Vagrant.
 unset CDPATH
 #CURDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
