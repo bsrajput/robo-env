@@ -19,7 +19,6 @@ else
     then
       startup=`ls /etc/init.d/ | grep $service`
       echo -n "Found startap script /etc/init.d/${startup}. Starting the $service "
-          /etc/init.d/${startup} start
+      /etc/init.d/${startup} start
       fi
-fi
 fi
