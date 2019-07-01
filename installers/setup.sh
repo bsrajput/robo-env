@@ -11,6 +11,14 @@ unset CDPATH
 CURDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 
+echo "Adding the repo"
+./setup-repo.sh
+retval=$?
+echo "Debian Buster is upto date"
+if [ $retval -ne 0 ]; then
+    echo "Error in Debian Buster package please check"
+fi
+
 echo "Installing the required packages"
 ./setup-package.sh
 retval=$?
@@ -31,6 +39,13 @@ retval=$?
 echo "Packer is upto date"
 if [ $retval -ne 0 ]; then
     echo "Error in Packer installation please check"
+fi
+
+./setup-docker.sh
+retval=$?
+echo "Docker is upto date"
+if [ $retval -ne 0 ]; then
+    echo "Error in Docker installation please check"
 fi
 
 
