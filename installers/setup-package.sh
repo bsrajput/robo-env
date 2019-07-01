@@ -1,9 +1,14 @@
-#!/bin/bash
-# Author: Abhishek Anand Amralkar
-# This script installs packages needed for my tools to run on my debian.
-# Fail on error
+#!/usr/bin/env bash
 
-set -e
+# Author: Abhishek Anand Amralkar
+# This script installs Debian Packages
+
+set -o errexit
+set -o pipefail
+set -o nounset
+
+unset CDPATH
+CURDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Pick script location
 SETUP_DIR=$(pwd)
@@ -43,4 +48,6 @@ sudo apt-get install resolvconf -y
 sudo apt-get install python3-pip -y
 sudo apt-get install htop -y
 sudo apt-get install rsync -y
+sudo apt-get install python-dev -y
+sudo apt-get install python-setuptools -y
 echo "Utilities installation finished"

@@ -1,29 +1,35 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 # Author: Abhishek Anand Amralkar
 # This script installs Terraform
 
+set -o errexit
+set -o pipefail
+set -o nounset
+
 unset CDPATH
 CURDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-TF_VERSION=${TF_VERSION:-"0.11.12"}
-TF_BIN=${TF_BIN:-"~/bin/terraform"}
+TF_BIN=${TF_BIN:-"/usr/local/bin/terraform"}
+URL="https://releases.hashicorp.com/terraform"
+TF_VER="$(curl -sL $URL | grep -v beta | grep -Po "_(\d*\.?){3}" | sed 's/_//' | sort -V | tail -1)"
+ZIP="terraform_${TF_VER}_linux_amd64.zip"
+INSTALL_DIR=${1:-/usr/local/bin/}
 
 install_terraform (){
-    if [ ! -e "$TF_BIN" ];
+    if [ -e "${TF_BIN}" ];
      then
-           echo "Installing Terraform..."
-           wget --no-check-certificate  https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip 
-           sudo unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip
-           sudo mv terraform /home/aaa/bin/
-           echo "Done!"
+        echo "Terraform is already installed"   
     else
-        
-
-
-install_leingen () {
-    if [ ! -e "$LEIN_BIN" ];
-    then
-      cd /tmp && curl -O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein && sudo chmod 755 lein && sudo mv lein /usr/bin && sudo chmod a+x ~/bin/lein
-    else
-      echo "Lein is installed"
-      fi
+        echo "Installing Terraform..."
+        sudo curl -s ${URL}/${TF_VER}/terraform_${TF_VER}_linux_amd64.zip -o ${INSTALL_DIR}/${ZIP}
+        sudo unzip -o ${INSTALL_DIR}/$ZIP -d $INSTALL_DIR && sudo rm -v ${INSTALL_DIR}/$ZIP
+        echo "Done!"
+    fi
 }
+
+main (){
+    install_terraform
+ }
+
+main
+    
