@@ -14,8 +14,8 @@ SOURCE_DIR=/etc/apt
 SOURCE_FILE=${SOURCE_DIR}/sources.list
 
 update_repo() {
-sudo mv ${SOURCE_FILE} ${SOURCE_FILE.bk}
-sudo cat >>${SOURCE_FILE} <<EOF
+mv ${SOURCE_FILE} ${SOURCE_FILE}.bk
+cat >>${SOURCE_FILE} <<EOF
 deb http://httpredir.debian.org/debian buster main
 deb http://httpredir.debian.org/debian buster-updates main
 deb http://security.debian.org buster/updates main

@@ -1,14 +1,17 @@
-FROM debian:buster
-MAINTAINER Abhishek Amralkar
+from debian:buster
+maintainer Abhishek Amralkar
 
-ENV app roboenv
-ENV HOME /opt/${app}
+env app         roboenv
+env roboenv_dir app
+env HOME /opt/${app}
 
+#update the docker
+run apt-get install && \
+        apt-get update && \
+        apt-get install sudo -y
 # Set up app
-RUN mkdir -p /opt/roboenv
-WORKDIR /opt/roboenv
+workdir /opt/${app}
 
-COPY installers/setup.sh /opt/roboenv/setup.sh
-COPY installers/setup-package.sh /opt/roboenv/setup-package.sh
-
-CMD ["/opt/roboenv/setup.sh"]
+copy installers/setup.sh /opt/${app}/
+copy installers/* /opt/${app}/
+cmd ["/opt/roboenv/setup.sh"]
