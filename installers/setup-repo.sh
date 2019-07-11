@@ -26,3 +26,5 @@ EOF
 main (){
     update_repo
 }
+
+main

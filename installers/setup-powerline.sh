@@ -1,3 +1,11 @@
+#!/bin/bash
+# Author: Abhishek Anand Amralkar
+# This script installs Powerline fonts.
+
+unset CDPATH
+CURDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+
 # install powerline fonts
 wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf

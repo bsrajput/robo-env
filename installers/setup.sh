@@ -55,3 +55,10 @@ echo "Clojure and LEIN is upto date"
 if [ $retval -ne 0 ]; then
     echo "Error in Clojure and LEIN installation please check"
 fi
+
+./setup-firefox.sh
+retval=$?
+echo "Firefox is upto date"
+if [ $retval -ne 0 ]; then
+    echo "Error in Firefox installation please check"
+fi

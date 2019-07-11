@@ -2,7 +2,9 @@
 # Author: Abhishek Anand Amralkar
 # Shell (zsh) and syntax highlighting
 
-ZSH_BIN="/usr/bin/zsh"
+unset CDPATH
+CURDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ZSH_BIN=${ZSH_BIN:-"/usr/bin/zsh"}
 
 install_zsh () {
     if [ ! -e "$ZSH_BIN" ];
