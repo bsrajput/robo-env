@@ -1,0 +1,21 @@
+#+TITLE: Kafka Cheatsheet
+
+* Create a Kafka topic
+
+#+BEGIN_SRC
+
+  cd /home/aaa/code/kafka-docker/kafka
+
+  bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --create --topic "abhishek" --partitions 1 --replication-factor 1
+
+#+END_SRC
+
+* List the topics
+
+#+BEGIN_SRC
+
+  cd /home/aaa/code/kafka-docker/kafka
+
+  bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --list
+
+#+END_SRC
