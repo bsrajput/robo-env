@@ -39,3 +39,33 @@
   bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --list abhishek --describe
 
 #+END_SRC
+
+*** Delete the topic
+
+#+BEGIN_SRC
+
+  cd /home/aaa/code/kafka-docker/kafka
+
+  bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --delete --topic abhishek
+
+#+END_SRC
+
+*** Alter the topic (retention)
+
+#+BEGIN_SRC
+
+  cd /home/aaa/code/kafka-docker/kafka
+
+  bin/kafka-configs.sh --zookeeper localhost:2181 --alter --entity-type topics --entity-name abhishek --add-config retention.ms=1000
+
+#+END_SRC
+
+*** List the message from a topic
+
+#+BEGIN_SRC
+
+  cd /home/aaa/code/kafka-docker/kafka
+
+  bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic abhishek --from-beginning
+
+#+END_SRC
