@@ -1,6 +1,6 @@
 #+TITLE: Kafka Cheatsheet
 
-* Create a Kafka topic
+*** Create a Kafka topic
 
 #+BEGIN_SRC
 
@@ -10,12 +10,32 @@
 
 #+END_SRC
 
-* List the topics
+*** List the topics
 
 #+BEGIN_SRC
 
   cd /home/aaa/code/kafka-docker/kafka
 
   bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --list
+
+#+END_SRC
+
+*** Alter the topics
+
+#+BEGIN_SRC
+
+  cd /home/aaa/code/kafka-docker/kafka
+
+  bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --topic abhishek --partitions 3
+
+#+END_SRC
+
+*** Describe the topics
+
+#+BEGIN_SRC
+
+  cd /home/aaa/code/kafka-docker/kafka
+
+  bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --list abhishek --describe
 
 #+END_SRC
