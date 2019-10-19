@@ -1,1 +1,10 @@
-#+TITLE: AAA Notesa
+#+TITLE: AAA Notes
+
+*** Fix the ZSH corrupt history
+
+#+BEGIN_SRC
+cd ~
+mv .zsh_history .zsh_history_bad
+strings .zsh_history_bad > .zsh_history
+fc -R .zsh_history
+#+END_SRC
