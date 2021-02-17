@@ -9,12 +9,13 @@ set -o nounset
 
 unset CDPATH
 CURDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-DOCKER_COMPOSE_VERSION=${DOCKER_COMPOSE_VERSION:-"1.23.2"}
-DOCKER_COMPOSE_PATH=${DOCKER_COMPOSE_PATH:-"/us"}
+DOCKER_PATH=${DOCKER_PATH:-"/usr/bin/docker"}
+DOCKER_COMPOSE_VERSION=${DOCKER_COMPOSE_VERSION:-"1.28.2"}
+DOCKER_COMPOSE_PATH=${DOCKER_COMPOSE_PATH:-"/home/aaa/System/Bin/docker-compose"}
 USER_NAME=${USER_NAME:-"aaa"}
 
 install_docker() {
-    if [ ! -e /usr/bin/docker];
+    if [ ! -e ${DOCKER_PATH} ];
     then
         echo "Installing Docker"
         wget -qO- https://get.docker.com/ | sh
@@ -28,13 +29,13 @@ install_docker() {
 }
 
 install_dockercompose(){
-    if [ ! -e "$DOCKER_COMPOSE_VERSION"];
+    if [ ! -e ${DOCKER_COMPOSE_PATH} ];
     then
         echo "Downloading Docker Compose"
-        sudo curl -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        sudo curl -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /home/aaa/System/Bin/docker-compose
         echo "Docker Compose installed"
         echo "Change permission to execute"
-        sudo chmod +x /usr/local/bin/docker-compose
+        sudo chmod +x /home/aaa/System/Bin/docker-compose
     else
         echo "Docker Compose already installed"
         fi
