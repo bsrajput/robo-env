@@ -1,23 +1,9 @@
-* ROBO ENV
+#+TITLE: =/home/aaa/.dotfiles=
 
-This repository contains scripts to install the tools which I use in my day2day life.
-This repository is solely tested on Debian , as I use Debian.
+This repo is the home of my custom system configuration which enables a consistent computing experience across multiple machines.  These days I primarily use GNU/Linux via the [[https://guix.gnu.org][GNU Guix distribution]].
 
-  -  [[https://www.docker.com][docker]]
-  -  [[https://ohmyz.sh][ohmyzsh]]
-  -  [[https://github.com/tmux/tmux][tmux]]
-  -  [[https://www.gnu.org/software/emacs/][emacs]]
-  -  [[https://clojure.org][Clojure]]
-  -  [[https://rust-lang.org][Rust]]
+I manage the various configuration files in this repo using [[https://www.gnu.org/software/stow/][GNU Stow]].  This allows me to set up symlinks for all of my dotfiles using a single command:
 
-* Usage
-
-
-  - [[https://raw.githubusercontent.com/abhishekamralkar/robo-env/master/add_me_to_sudoers.sh][add_me_to_sudo]]
-  - [[https://raw.githubusercontent.com/abhishekamralkar/robo-env/master/update_repo.sh][update_repo]]
-  - [[https://raw.githubusercontent.com/abhishekamralkar/robo-env/master/setup.sh][setup]]
-
-* CheatSheets
-
-  - [[https://github.com/abhishekamralkar/robo-env/blob/master/cheatsheets/emacs][emacs-cheatsheet]]
-  - [[https://github.com/abhishekamralkar/robo-env/blob/master/cheatsheets/tmux][tmux-cheatsheet]]
+#+BEGIN_SRC sh
+stow .
+#+END_SRC
