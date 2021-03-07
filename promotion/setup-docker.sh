@@ -12,6 +12,15 @@ CURDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 DOCKER_PATH=${DOCKER_PATH:-"/usr/bin/docker"}
 DOCKER_COMPOSE_VERSION=${DOCKER_COMPOSE_VERSION:-"1.28.2"}
 DOCKER_COMPOSE_PATH=${DOCKER_COMPOSE_PATH:-"/home/aaa/System/Bin/docker-compose"}
+BIN_PATH=${BIN_PATH:-"/home/aaa/System/Bin/"}
+
+if [ ! -e ${BIN_PATH} ];
+then
+	mkdir -p ${BIN_PATH}
+else
+	echo ${BIN_PATH} "exists"
+fi
+
 USER_NAME=${USER_NAME:-"aaa"}
 
 install_docker() {
