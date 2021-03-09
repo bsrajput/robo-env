@@ -8,7 +8,7 @@ create_ssh_key (){
     if [ ! -e ${KEY_PATH} ];
     then
         echo "Creating SSH key"
-        ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "abhishekamralkar@pm.me"
+        ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "abhishekamralkar@gmail.com"
         eval "$(ssh-agent -s)"
         ssh-add ~/.ssh/id_ed25519
     else
