@@ -16,8 +16,8 @@ install_zsh () {
       ./setup-fzf.sh
       git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
       sudo rm -rf ~/.zshrc
-      cd /tmp && wget https://raw.githubusercontent.com/abhishekamralkar/configs/master/ohmyzsh/.zshrc
-      mv /tmp/.zshrc ~/ 
+      cd /tmp && wget https://raw.githubusercontent.com/abhishekamralkar/configs/master/ohmyzsh/zshrc
+      mv /tmp/zshrc ~/.zshrc
       sudo chsh -s /bin/zsh
 
     else

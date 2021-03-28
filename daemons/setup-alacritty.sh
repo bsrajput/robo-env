@@ -20,7 +20,9 @@ get_rust () {
 get_alacritty () {
     if [ ! -e "$ALACRITTY_PATH" ]; 
     then
-       git clone https://github.com/alacritty/alacritty.git /tmp/alacritty cd /tmp/alacritty \
+       rm -rf /tmp/alacritty \
+
+       && git clone https://github.com/alacritty/alacritty.git /tmp/alacritty cd /tmp/alacritty \
        && cargo build --release \
        && infocmp alacritty \
        && sudo tic -xe alacritty,alacritty-direct extra/alacritty.info \
