@@ -3,7 +3,7 @@
 # Shell (zsh) and syntax highlighting
 
 unset CDPATH
-CURDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+#CURDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ZSH_BIN=${ZSH_BIN:-"/usr/bin/zsh"}
 
 install_zsh () {
@@ -12,7 +12,8 @@ install_zsh () {
       sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
       git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
       git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
-      git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+      git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+      ./setup-fzf.sh
       git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
       sudo rm -rf ~/.zshrc
       cd /tmp && wget https://raw.githubusercontent.com/abhishekamralkar/configs/master/ohmyzsh/.zshrc
