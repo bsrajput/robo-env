@@ -11,9 +11,10 @@ unset CDPATH
 CURDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 TF_BIN=${TF_BIN:-"/usr/local/bin/terraform"}
 URL="https://releases.hashicorp.com/terraform"
-TF_VER="$(curl -sL $URL | grep -v beta | grep -Po "_(\d*\.?){3}" | sed 's/_//' | sort -V | tail -1)"
+#TF_VER="$(curl -sL $URL | grep -v beta | grep -Po "_(\d*\.?){3}" | sed 's/_//' | sort -V | tail -1)"
+TF_VER=0.13.6
 ZIP="terraform_${TF_VER}_linux_amd64.zip"
-INSTALL_DIR=${1:-/usr/local/bin/}
+INSTALL_DIR=${1:-/usr/local/bin}
 
 install_terraform (){
     if [ -e "${TF_BIN}" ];
